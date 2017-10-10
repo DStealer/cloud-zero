@@ -1,0 +1,2 @@
+slice2java --impl -I src\main\scripts\ --output-dir src\main\java src\main\scripts\*.ice
+protoc-3.0.0-windows-x86_64.exe src/main/scripts/call_protocol.proto -IPATH=src/main/scripts --java_out=src/main/java

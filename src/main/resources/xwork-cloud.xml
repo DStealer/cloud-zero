@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC
+        "-//OpenSymphony Group//XWork 2.1//EN"
+        "http://www.opensymphony.com/xwork/xwork-2.1.dtd">
+<xwork>
+    <include file="xwork-default.xml"/>
+    <package name="cloud-default" abstract="true" extends="xwork-default">
+        <interceptors>
+            <interceptor-stack name="cloudZeroStack">
+                <interceptor-ref name="timer"/>
+                <interceptor-ref name="logger"/>
+                <interceptor-ref name="staticParams"/>
+            </interceptor-stack>
+        </interceptors>
+        <default-interceptor-ref name="cloudZeroStack"/>
+    </package>
+</xwork>

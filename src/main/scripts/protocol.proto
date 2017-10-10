@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+import "google/protobuf/any.proto";
+
+option java_package = "com.cloudzero.arch.pb";
+option java_multiple_files = true;
+option java_outer_classname = "Proto";
+//请求协议
+message CloudRequest {
+    string ngLabel = 1; //处理请求的单元的标签 [必须]
+    string ngVersion = 2; //处理请求的单元的版本 [必须]
+    string action = 3; //请求动作描述 [必须]
+    string actVersion = 4; //动作版本 [必须]
+    enum Platform {
+        Unknown = 0;
+        Android = 1;
+        Ios = 2;
+        Weixin = 3;
+        Web = 4;
+        Phone = 5;
+        Sms = 6;
+    }
+    Platform platform = 5; //请求发送平台的类型
+    reserved 6 to 20;
+    google.protobuf.Any body = 21; //请求消息体 [可选]
+}
+//响应协议
+message CloudResponse {
+    string returnCode = 1; //应答码 [必须]
+    string description = 2; //简短描述 [可选]
+    reserved 6 to 20;
+    google.protobuf.Any body = 21; //响应消息体 [可选]
+}
+//Void 类型
+message Void {
+
+}

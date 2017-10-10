@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <node-cfg>
+        <server-node>
+            <!-- 填写你的单元标签，例如：HelloWorldNG -->
+            <label>MockNG</label>
+            <!-- 填写你的单元版本，例如：0.0.1 -->
+            <version>0.0.1</version>
+        </server-node>
+        <!--xwork 服务接口配置文件-->
+        <xwork_cfg_file>
+            xwork-test.xml
+        </xwork_cfg_file>
+        <!--节点配置文件夹地址(绝对路径),其中配置文件名称规则: label-version.properties-->
+        <node-cfg-dir>
+            D:\Workspace\serverprojects_other\cloud_zero\arch-m3\src\main\resources\node-config\
+        </node-cfg-dir>
+    </node-cfg>
+    <!--数据库配置文件地址(绝对路径)-->
+    <datastore-cfg-file>
+        D:\Workspace\serverprojects_other\cloud_zero\arch-m3\src\main\resources\datastore-test.xml
+    </datastore-cfg-file>
+</configuration>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xwork PUBLIC
+        "-//OpenSymphony Group//XWork 2.1//EN"
+        "http://www.opensymphony.com/xwork/xwork-2.1.dtd">
+<xwork>
+    <include file="xwork-cloud.xml"/>
+    <package name="Test" namespace="TestAC" extends="cloud-default">
+        <action name="0.0.1" class="com.cloudzero.arch.xwork.TestAction">
+            <param name="enable">true</param>
+        </action>
+    </package>
+</xwork>
